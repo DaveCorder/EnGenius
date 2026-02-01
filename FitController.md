@@ -254,7 +254,7 @@ Two ways for this one:
 Using the same credentials as the FitCon stack:
 
 ``` shell
-ocker exec -it epc-db /usr/bin/mongo -u ${MONGO_USER} -p ${MONGO_PASSWORD} -authenticationDatabase admin "mongodb://127.0.0.1:27017/main"
+docker exec -it epc-db /usr/bin/mongo -u ${MONGO_USER} -p ${MONGO_PASSWORD} -authenticationDatabase admin "mongodb://127.0.0.1:27017/main"
 ```
 
 Using the `__system` user backdoor:

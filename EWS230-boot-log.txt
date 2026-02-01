@@ -1,0 +1,753 @@
+Cloud6_4x4_ECW230v3_firmware_v1.8.84-11.bin
+
+Format: Log Type - Time(microsec) - Message - Optional Info
+Log Type: B - Since Boot(Power On Reset),  D - Delta,  S - Statistic
+S - QC_IMAGE_VERSION_STRING=BOOT.BF.3.3.1-00148
+S - IMAGE_VARIANT_STRING=HAACANAZA
+S - OEM_IMAGE_VERSION_STRING=CRM
+S - Boot Config, 0x000002e5
+B -       201 - PBL, Start
+B -      2736 - bootable_media_detect_entry, Start
+B -      3444 - bootable_media_detect_success, Start
+B -      3448 - elf_loader_entry, Start
+B -      6116 - auth_hash_seg_entry, Start
+B -      6359 - auth_hash_seg_exit, Start
+B -     68562 - elf_segs_hash_verify_entry, Start
+B -    131258 - PBL, End
+B -    222284 - SBL1, Start
+B -    303231 - GCC [RstStat:0x10, RstDbg:0x600000] WDog Stat : 0x4
+B -    313326 - pm_device_init, Start
+B -    500169 - PM_SET_VAL:Skip
+D -    184677 - pm_device_init, Delta
+B -    502426 - pm_driver_init, Start
+D -      5368 - pm_driver_init, Delta
+B -    508984 - clock_init, Start
+D -      2104 - clock_init, Delta
+B -    512918 - boot_flash_init, Start
+D -     11224 - boot_flash_init, Delta
+B -    527894 - boot_config_data_table_init, Start
+D -      3050 - boot_config_data_table_init, Delta - (575 Bytes)
+B -    535366 - Boot Setting :  0x00000618
+B -    539362 - CDT version:2,Platform ID:8,Major ID:1,Minor ID:0,Subtype:6
+B -    546194 - sbl1_ddr_set_params, Start
+B -    550006 - CPR configuration: 0x30c
+B -    553453 - cpr_init, Start
+B -    556228 - Rail:0 Mode: 5 Voltage: 824000
+B -    561444 - CL CPR settled at 776000mV
+B -    564250 - Rail:1 Mode: 5 Voltage: 880000
+B -    568459 - Rail:1 Mode: 7 Voltage: 920000
+D -     16531 - cpr_init, Delta
+B -    575321 - Pre_DDR_clock_init, Start
+B -    579347 - Pre_DDR_clock_init, End
+B -    582733 - DDR Type : PCDDR4
+B -    589412 - do ddr sanity test, Start
+D -      1037 - do ddr sanity test, Delta
+B -    593225 - DDR: Start of HAL DDR Boot Training
+B -    597861 - DDR: End of HAL DDR Boot Training
+B -    603625 - DDR: Checksum to be stored on flash is -1412284378
+B -    614056 - Image Load, Start
+D -    222437 - QSEE Image Loaded, Delta - (1374392 Bytes)
+B -    836584 - Image Load, Start
+D -        61 - SEC Image Loaded, Delta - (0 Bytes)
+B -    844240 - Image Load, Start
+D -     10644 - DEVCFG Image Loaded, Delta - (26008 Bytes)
+B -    854976 - Image Load, Start
+D -     25254 - RPM Image Loaded, Delta - (106428 Bytes)
+B -    880321 - Image Load, Start
+D -     96075 - APPSBL Image Loaded, Delta - (593332 Bytes)
+B -    976518 - QSEE Execution, Start
+D -        61 - QSEE Execution, Delta
+B -    982344 - USB D+ check, Start
+D -         0 - USB D+ check, Delta
+B -    988718 - SBL1, End
+D -    768752 - SBL1, Delta
+S - Flash Throughput, 6790 KB/s  (2100735 Bytes,  309354 us)
+S - DDR Frequency, 600 MHz
+S - Core 0 Frequency, 1651 MHz
+
+
+U-Boot 2016.01-ECW230v3-uboot_version:V2.1.0 [Attitude Adjustment 12.09.1,e1bf470] (Mar 18 2021 - 21:35:34 +0800)
+
+DRAM:  smem ram ptable found: ver: 1 len: 4
+1 GiB
+NAND:  ONFI device found
+ID = 1590aac2
+Vendor = c2
+Device = aa
+page_size: 0x800, sector_size: 0x20000, oobsize: 0x40, size: 0x10000000
+256 MiB
+FLASH:  SF: Unsupported flash IDs: manuf ff, jedec ffff, ext_jedec ffff
+ipq_spi: SPI Flash not found (bus/cs/speed/mode) = (0/0/48000000/0)
+MMC:   sdhci: Node Not found, skipping initialization
+
+PCI0 is not defined in the device tree
+PCI1 is not defined in the device tree
+In:    serial@78B3000
+Out:   serial@78B3000
+Err:   serial@78B3000
+sn_74V164_led_init: !!!
+machid: 8010006
+MMC Device 0 not found
+eth0 MAC Address from ART is not valid
+eth1 MAC Address from ART is not valid
+eth2 MAC Address from ART is not valid
+eth3 MAC Address from ART is not valid
+eth4 MAC Address from ART is not valid
+eth5 MAC Address from ART is not valid
+
+Net:   MAC0 addr:0:3:7f:ba:db:ad
+ipq_qca8081_phy_init: PHY ID1: 0x4d
+ipq_qca8081_phy_init: PHY ID2: 0xd101
+EDMA ver 1 hw init
+Num rings - TxDesc:1 (0-0) TxCmpl:1 (7-7)
+RxDesc:1 (15-15) RxFill:1 (7-7)
+ipq807x_edma_alloc_rings: successfull
+ipq807x_edma_setup_ring_resources: successfull
+ipq807x_edma_configure_rings: successfull
+ipq807x_edma_hw_init: successfull
+eth0
+Warning: eth0 MAC addresses don't match:
+Address in SROM is         00:03:7f:ba:db:ad
+Address in environment is  88:dc:97:04:cf:a8
+
+
+Please choose the operation:
+   2: Load Linux System code then write to Flash via TFTP.
+   4: Entr boot command line interface.
+   9: Load Boot Loader code then write to Flash via TFTP.
+   e: Erase Boot Loader ENV config.
+   ESC: Please input ESC to run Burn-in testing.
+ 0
+bootargs=console=ttyMSM0,115200n8 ubi.mtd=rootfs root=mtd:ubi_rootfs rootfstype=squashfs rootwait
+Booting from flash
+Using nand device 0
+Booting from NAND FW1
+runcmd=setenv mtdids nand0=nand0 && setenv mtdparts mtdparts=nand0:0x6f00000@0x1000000(fs),${msmparts} && ubi part fs && ubi read 0x44000000 kernel &&
+ubi0: attaching mtd1
+ubi0: scanning is finished
+ubi0: attached mtd1 (name "mtd=0", size 111 MiB)
+ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+ubi0: good PEBs: 888, bad PEBs: 0, corrupted PEBs: 0
+ubi0: user volume: 3, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 2961/1008, WL threshold: 4096, image sequence number: 1250695036
+ubi0: available PEBs: 0, total reserved PEBs: 888, PEBs reserved for bad PEB handling: 40
+Read 0 bytes from volume kernel to 44000000
+No size specified -> Using max size (6094848)
+Could not find PCI in device tree
+## Loading kernel from FIT Image at 44000000 ...
+   Using 'config@hk07' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  ARM OpenWrt Linux-5.4.213
+     Type:         Kernel Image
+     Compression:  gzip compressed
+     Data Start:   0x440000e4
+     Data Size:    4372062 Bytes = 4.2 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x41208000
+     Entry Point:  0x41208000
+     Hash algo:    crc32
+     Hash value:   45d62f80
+     Hash algo:    sha1
+     Hash value:   16eecdda8a7aa185289839509c1c40438825271a
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 44000000 ...
+   Using 'config@hk07' configuration
+   Trying 'fdt@hk07' fdt subimage
+     Description:  ARM OpenWrt ipq8074-hkxx device tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x445000c4
+     Data Size:    66398 Bytes = 64.8 KiB
+     Architecture: ARM
+     Hash algo:    crc32
+     Hash value:   8c3ebdb1
+     Hash algo:    sha1
+     Hash value:   99008b7259c071b94c7487ff8865567cb4c9f017
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Booting using the fdt blob at 0x445000c4
+   Uncompressing Kernel Image ... OK
+   Loading Device Tree to 4a3ec000, end 4a3ff35d ... OK
+mtdparts = mtdparts=nand0:1024K@0x0(0:SBL1),1024K@0x100000(0:MIBIB),3M@0x200000(0:QSEE),512K@0x500000(0:DEVCFG),512K@0x580000(0:APDP),512K@0x600000(0:RPM),512K@0x680000(0:CDT),512K@0x700000(0:APPSBLENV),6784K@0x780000(0:APPSBL),384K@0xe20000(cert),640K@0xe80000(userconfig),384K@0xf20000(crashdump),512K@0xf80000(0:ART),111M@0x1000000(rootfs),9M@0x7f00000(0:WIFIFW),111M@0x8800000(rootfs_1),9M@0xf700000(0:WIFIFW_1)
+Using machid 0x8010006 from environment
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 5.4.213 (jason@rd2-HP) (gcc version 7.5.0 (OpenWrt GCC 7.5.0 r0-6bff0bdd)) #0 SMP PREEMPT Fri Oct 4 04:04:23 2024
+[    0.000000] CPU: ARMv7 Processor [410fd034] revision 4 (ARMv7), cr=10c0383d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Qualcomm Technologies, Inc. IPQ8074/AP-HK07
+[    0.000000] OF: fdt: Ignoring memory range 0x40000000 - 0x41000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] Reserved memory: created DMA memory pool at 0x4a300000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node tzapp_data@4a300000, compatible id shared-dma-pool
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] psci: OSI mode supported.
+[    0.000000] percpu: Embedded 15 pages/cpu s32268 r8192 d20980 u61440
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 227620
+[    0.000000] Kernel command line: console=ttyMSM0,115200n8 ubi.mtd=rootfs root=mtd:ubi_rootfs rootfstype=squashfs rootwait
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 899244K/919552K available (6095K kernel code, 322K rwdata, 2108K rodata, 1024K init, 362K bss, 20308K reserved, 0K cma-reserved, 0K highmem)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] GICv2m: range[mem 0x0b00a000-0x0b00affc], SPI[448:479]
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000005] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000016] Switching to timer-based delay loop, resolution 52ns
+[    0.000683] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.000696] pid_max: default: 32768 minimum: 301
+[    0.000842] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.000856] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.001606] CPU: Testing write buffer coherency: ok
+[    0.001923] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.002483] Setting up static identity map for 0x41300000 - 0x41300060
+[    0.002591] rcu: Hierarchical SRCU implementation.
+[    0.004931] MSM Memory Dump base table set up
+[    0.004954] MSM Memory Dump apps data table set up
+[    0.005198] smp: Bringing up secondary CPUs ...
+[    0.005952] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.006756] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.007521] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.007612] smp: Brought up 1 node, 4 CPUs
+[    0.007630] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+[    0.007637] CPU: All CPU(s) started in SVC mode.
+[    0.021534] VFP support v0.3: implementor 41 architecture 3 part 40 variant 3 rev 4
+[    0.021831] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.021849] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    0.021984] pinctrl core: initialized pinctrl subsystem
+[    0.023296] NET: Registered protocol family 16
+[    0.023559] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.024500] cpuidle: using governor ladder
+[    0.024529] cpuidle: using governor menu
+[    0.024685] NET: Registered protocol family 42
+[    0.024944] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.024953] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.071591] spmi spmi-0: PMIC arbiter version v2 (0x20010000)
+[    0.090499] qcom,cpr4-apss-regulator b018000.cpr4-ctrl: CPR valid fuse count: 4
+[    0.090789] qcom,cpr3-npu-regulator a4000.npu-cpr: NPU CPR valid fuse count: 2
+[    0.092180] msm_sps_probe: sps:sps is ready
+[    3.079603] pps_core: LinuxPPS API ver. 1 registered
+[    3.079612] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    3.079633] PTP clock support registered
+[    3.080570] workqueue: max_active 576 requested for napi_workq is out of range, clamping between 1 and 512
+[    3.081425] clocksource: Switched to clocksource arch_sys_counter
+[    3.082293] thermal_sys: Registered thermal governor 'step_wise'
+[    3.082297] thermal_sys: Registered thermal governor 'user_space'
+[    3.084444] NET: Registered protocol family 2
+[    3.084657] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    3.085599] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes, linear)
+[    3.085636] TCP established hash table entries: 8192 (order: 3, 32768 bytes, linear)
+[    3.085721] TCP bind hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    3.085862] TCP: Hash tables configured (established 8192 bind 8192)
+[    3.085947] UDP hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    3.085984] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes, linear)
+[    3.086173] NET: Registered protocol family 1
+[    3.086212] PCI: CLS 0 bytes, default 64
+[    3.087241] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 7 counters available
+[    3.088191] Initialise system trusted keyrings
+[    3.088405] workingset: timestamp_bits=14 max_order=18 bucket_order=4
+[    3.093075] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    3.093084] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    3.119876] Key type asymmetric registered
+[    3.119887] Asymmetric key parser 'x509' registered
+[    3.124292] qcom-qmp-phy 78000.ssphy: 78000.ssphy supply vdda-phy not found, using dummy regulator
+[    3.124373] qcom-qmp-phy 78000.ssphy: 78000.ssphy supply vdda-pll not found, using dummy regulator
+[    3.125342] qcom-qmp-phy 78000.ssphy: Registered Qcom-QMP phy
+[    3.125509] qcom-qmp-phy 58000.ssphy: 58000.ssphy supply vdda-phy not found, using dummy regulator
+[    3.125566] qcom-qmp-phy 58000.ssphy: 58000.ssphy supply vdda-pll not found, using dummy regulator
+[    3.126427] qcom-qmp-phy 58000.ssphy: Registered Qcom-QMP phy
+[    3.128997] bam-dma-engine 704000.dma: num-channels unspecified in dt
+[    3.129008] bam-dma-engine 704000.dma: num-ees unspecified in dt
+[    3.129655] bam-dma-engine 7884000.dma: qcom,controlled-remotely unspecified
+[    3.131210] bam-dma-engine 7984000.dma: qcom,controlled-remotely unspecified
+[    3.132075] msm-dcc b3000.dcc: DCC XPU is not specified
+[    3.132283] msm-dcc b3000.dcc: jiffies_64: 0xffff8c08, cntvct_64: 0xa9a5ce2
+[    3.132296] msm-dcc b3000.dcc: gcnt_hi: 0x00000000(0x(ptrval))
+[    3.132308] msm-dcc b3000.dcc: gcnt_lo: 0x0a9a5ed9(0x(ptrval))
+[    3.132706] global timer is null
+[    3.132969] CPU: IPQ8072A, SoC Version: 2.0
+[    3.132977] OEM_ID: 0, PROD_ID: 0
+[    3.133421] msm_rpm_log_probe: OK
+[    3.133658] TZ SMMU State: SMMU Stage2 Enabled
+[    3.133725] TZ Log : Will warn on Access Violation, as paniconaccessviolation is not set
+[    3.134602] pmd9655_s3: supplied by e-smps1-reg
+[    3.134919] pmd9655_s4: supplied by e-smps1-reg
+[    3.135374] pmd9655_ldo11: supplied by e-smps1-reg
+[    3.135911] msm_serial 78b3000.serial: msm_serial: detected port #0
+[    3.135944] msm_serial 78b3000.serial: uartclk = 3686400
+[    3.135989] 78b3000.serial: ttyMSM0 at MMIO 0x78b3000 (irq = 27, base_baud = 230400) is a MSM
+[    3.136011] msm_serial: console setup on port #0
+[    3.859849] printk: console [ttyMSM0] enabled
+[    3.864788] msm_serial: driver initialized
+[    3.869124] random: crng init done
+[    3.876520] brd: module loaded
+[    3.880139] loop: module loaded
+[    3.881811] nand: device found, Manufacturer ID: 0xc2, Chip ID: 0xaa
+[    3.882218] nand: Macronix MX30UF2G18AC
+[    3.888812] nand: 256 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+[    3.892497] 17 fixed-partitions partitions found on MTD device qcom_nand.0
+[    3.900014] Creating 17 MTD partitions on "qcom_nand.0":
+[    3.906890] 0x000000000000-0x000000100000 : "0:SBL1"
+[    3.913862] 0x000000100000-0x000000200000 : "0:MIBIB"
+[    3.918723] 0x000000200000-0x000000500000 : "0:QSEE"
+[    3.925361] 0x000000500000-0x000000580000 : "0:DEVCFG"
+[    3.928295] 0x000000580000-0x000000600000 : "0:APDP"
+[    3.933304] 0x000000600000-0x000000680000 : "0:RPM"
+[    3.938372] 0x000000680000-0x000000700000 : "0:CDT"
+[    3.942996] 0x000000700000-0x000000780000 : "0:APPSBLENV"
+[    3.947838] 0x000000780000-0x000000e20000 : "0:APPSBL"
+[    3.958668] 0x000000e20000-0x000000e80000 : "cert"
+[    3.959668] 0x000000e80000-0x000000f20000 : "userconfig"
+[    3.963530] 0x000000f20000-0x000000f80000 : "crashdump"
+[    3.968749] 0x000000f80000-0x000001000000 : "0:ART"
+[    3.973809] 0x000001000000-0x000007f00000 : "rootfs"
+[    4.073203] mtd: device 13 (rootfs) set to be root filesystem
+[    4.073496] mtdsplit: no squashfs found in "rootfs"
+[    4.077932] 0x000007f00000-0x000008800000 : "0:WIFIFW"
+[    4.090962] 0x000008800000-0x00000f700000 : "rootfs_1"
+[    4.186640] 0x00000f700000-0x000010000000 : "0:WIFIFW_1"
+[    4.195798] spi_qup 78b5000.spi: IN:block:16, fifo:64, OUT:block:16, fifo:64
+[    4.196440] spi-nor spi0.0: unrecognized JEDEC id bytes: ff ff ff ff ff ff
+[    4.203344] qca-mdio 90000.mdio: Reset PHY by GPIO 485
+[    4.428691] qca-mdio 90000.mdio: Reset PHY by GPIO 486
+[    4.648963] mdio_bus 90000.mdio: MDIO device at address 0 is missing.
+[    4.649021] mdio_bus 90000.mdio: MDIO device at address 1 is missing.
+[    4.654438] mdio_bus 90000.mdio: MDIO device at address 2 is missing.
+[    4.660834] mdio_bus 90000.mdio: MDIO device at address 3 is missing.
+[    4.667271] mdio_bus 90000.mdio: MDIO device at address 4 is missing.
+[    4.674272] qca-mdio 90000.mdio: qca-mdio driver was registered
+[    4.680166] i2c /dev entries driver
+[    4.691290] device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+[    4.692727] qcom_ice_get_device_tree_data: No vdd-hba-supply regulator, assuming not needed
+[    4.698842] ICE IRQ = 28
+[    4.707267] sdhci: Secure Digital Host Controller Interface driver
+[    4.709636] sdhci: Copyright(c) Pierre Ossman
+[    4.715642] sdhci-pltfm: SDHCI platform and OF driver helper
+[    4.720464]
+[    4.720464] Version Rollback Feature Disabled
+[    4.728257] remoteproc remoteproc0: cd00000.q6v5_wcss is available
+[    4.731853] SPMI VADC - Min ch: 0 Max ch: 15
+[    4.739505] coresight-tmc 6027000.tmc: failed to get flush cti, defer probe
+[    4.742177] coresight-dynamic-funnel 6021000.funnel: Uses obsolete Coresight DT bindings
+[    4.750511] coresight coresight-etm0: CPU0: ETM v4.0 initialized
+[    4.757059] coresight-etm4x 619c000.etm: CPU0: (null) initialized
+[    4.763424] coresight coresight-etm1: CPU1: ETM v4.0 initialized
+[    4.769017] coresight-etm4x 619d000.etm: CPU1: (null) initialized
+[    4.775484] coresight coresight-etm2: CPU2: ETM v4.0 initialized
+[    4.781082] coresight-etm4x 619e000.etm: CPU2: (null) initialized
+[    4.787552] coresight coresight-etm3: CPU3: ETM v4.0 initialized
+[    4.793167] coresight-etm4x 619f000.etm: CPU3: (null) initialized
+[    4.799413] coresight-stm 6002000.stm: coresight-stm : stm_register_device failed, probing deferred
+[    4.805346] OF: graph: no port node found in /soc/cti@6010000
+[    4.814267] OF: graph: no port node found in /soc/cti@6011000
+[    4.820142] OF: graph: no port node found in /soc/cti@6012000
+[    4.825903] OF: graph: no port node found in /soc/cti@6013000
+[    4.831623] OF: graph: no port node found in /soc/cti@6014000
+[    4.837329] OF: graph: no port node found in /soc/cti@6015000
+[    4.843082] OF: graph: no port node found in /soc/cti@6016000
+[    4.848791] OF: graph: no port node found in /soc/cti@6017000
+[    4.854538] OF: graph: no port node found in /soc/cti@6018000
+[    4.860259] OF: graph: no port node found in /soc/cti@6019000
+[    4.865995] OF: graph: no port node found in /soc/cti@601a000
+[    4.871729] OF: graph: no port node found in /soc/cti@601b000
+[    4.877440] OF: graph: no port node found in /soc/cti@601c000
+[    4.883187] OF: graph: no port node found in /soc/cti@601d000
+[    4.888903] OF: graph: no port node found in /soc/cti@601e000
+[    4.894645] OF: graph: no port node found in /soc/cti@601f000
+[    4.900354] OF: graph: no port node found in /soc/cti@6198000
+[    4.906116] OF: graph: no port node found in /soc/cti@6199000
+[    4.911837] OF: graph: no port node found in /soc/cti@619a000
+[    4.917546] OF: graph: no port node found in /soc/cti@619b000
+[    4.923298] OF: graph: no port node found in /soc/cti@610c000
+[    4.929801] OF: graph: no port node found in /soc/hwevent@6101000
+[    4.934573] coresight-hwevent 6101000.hwevent: No csr data
+[    4.940895] OF: graph: no port node found in /soc/csr@6001000
+[    4.946116] coresight-csr 6001000.csr: CSR initialized: coresight-csr
+[    4.952855] NET: Registered protocol family 10
+[    4.959074] Segment Routing with IPv6
+[    4.962696] NET: Registered protocol family 17
+[    4.966379] Bridge firewalling registered
+[    4.970659] 8021q: 802.1Q VLAN Support v1.8
+[    4.974934] Registering SWP/SWPB emulation handler
+[    4.978859] Loading compiled-in X.509 certificates
+[    5.003297] qcom,cpr4-apss-regulator b018000.cpr4-ctrl: CPR valid fuse count: 4
+[    5.003548] cpr4_ipq807x_apss_read_fuse_data: apc_corner: speed bin = 0
+[    5.009412] cpr4_ipq807x_apss_read_fuse_data: apc_corner: CPR fusing revision = 1
+[    5.016037] cpr4_ipq807x_apss_read_fuse_data: apc_corner: CPR misc fuse value = 0
+[    5.023696] cpr4_ipq807x_apss_read_fuse_data: apc_corner: Voltage boost fuse config = 0 boost = disable
+[    5.031197] cpr3_mem_acc_init: apc: not using memory accelerator regulator
+[    5.040331] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused      SVS: open-loop= 704000 uV
+[    5.047288] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused      NOM: open-loop= 816000 uV
+[    5.057262] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused    TURBO: open-loop= 888000 uV
+[    5.067071] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused   STURBO: open-loop= 976000 uV
+[    5.076951] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused      SVS: quot[ 7]= 691, quot_offset[ 7]=   0
+[    5.086693] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused      NOM: quot[ 7]= 900, quot_offset[ 7]= 205
+[    5.097542] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused    TURBO: quot[ 7]=1021, quot_offset[ 7]= 120
+[    5.108480] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused   STURBO: quot[ 7]=1176, quot_offset[ 7]= 155
+[    5.119554] cpr3_regulator_init_ctrl: apc: Default CPR mode = closed-loop
+[    5.120393] qcom,cpr3-npu-regulator a4000.npu-cpr: NPU CPR valid fuse count: 2
+[    5.137278] cpr3_mem_acc_init: npu: not using memory accelerator regulator
+[    5.144239] npu_corner: fused      NOM: open-loop= 792000 uV
+[    5.151076] npu_corner: fused    TURBO: open-loop= 864000 uV
+[    5.156956] npu_corner: fused      NOM: open-loop= 792000 uV
+[    5.162548] npu_corner: fused    TURBO: open-loop= 864000 uV
+[    5.168206] npu_corner: Normal and Cold condition init done. Default to normal.
+[    5.174892] core: _opp_supported_by_regulators: OPP minuV: 0 maxuV: 0, not supported by regulator
+[    5.180861] cpu cpu0: _opp_add: OPP not supported by regulators (0)
+[    5.190501] cpufreq: cpufreq_online: CPU0: Running at unlisted freq: 800000 KHz
+[    5.196168] cpufreq: cpufreq_online: CPU0: Unlisted initial frequency changed to: 1017600 KHz
+[    5.203558] sps_register_bam_device: sps:BAM 0x06044000 is registered
+[    5.212439] coresight coresight-stm: STM32 initialized
+[    5.218849] ubi0: attaching mtd13
+[    5.668245] ubi0: scanning is finished
+[    5.673656] ubi0: attached mtd13 (name "rootfs", size 111 MiB)
+[    5.673675] ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    5.678370] ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    5.685240] ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    5.692091] ubi0: good PEBs: 888, bad PEBs: 0, corrupted PEBs: 0
+[    5.698854] ubi0: user volume: 3, internal volumes: 1, max. volumes count: 128
+[    5.705112] ubi0: max/mean erase counter: 2961/1008, WL threshold: 4096, image sequence number: 1250695036
+[    5.712149] ubi0: available PEBs: 0, total reserved PEBs: 888, PEBs reserved for bad PEB handling: 40
+[    5.721788] ubi0: background thread "ubi_bgt0d" started, PID 93
+[    5.722593] hctosys: unable to open rtc device (rtc0)
+[    5.738909] VFS: Mounted root (squashfs filesystem) readonly on device 31:18.
+[    5.742935] Freeing unused kernel memory: 1024K
+[    5.771993] Run /sbin/init as init process
+[    5.954924] init: Console is alive
+[    5.955113] init: - watchdog -
+[    6.991674] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    7.013369] Button Hotplug driver version 0.4.1
+[    7.014974] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    7.025327] init: - preinit -
+touch: /etc/config/skb_recycler: Read-only file system
+uci: Entry not found
+uci: Entry not found
+uci: Entry not found
+uci: Entry not found
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    9.591534] UBIFS (ubi0:2): Mounting in unauthenticated mode
+[    9.591648] UBIFS (ubi0:2): background thread "ubifs_bgt0_2" started, PID 160
+[    9.619525] UBIFS (ubi0:2): recovery needed
+[    9.894494] UBIFS (ubi0:2): recovery completed
+[    9.894566] UBIFS (ubi0:2): UBIFS: mounted UBI device 0, volume 2, name "rootfs_data"
+[    9.897826] UBIFS (ubi0:2): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[    9.905738] UBIFS (ubi0:2): FS size: 65900544 bytes (62 MiB, 519 LEBs), journal size 3301376 bytes (3 MiB, 26 LEBs)
+[    9.915632] UBIFS (ubi0:2): reserved for root: 3112645 bytes (3039 KiB)
+[    9.925869] UBIFS (ubi0:2): media format: w4/r0 (latest is w4/r0), UUID 2DE79262-7593-4D87-AA70-FD4AECD458FE, small LPT model
+[    9.935052] mount_root: switching to ubifs overlay
+12064+0 records in
+12064+0 records out
+12064 bytes (11.8KB) copied, 0.035334 seconds, 333.4KB/s
+131072+0 records in
+131072+0 records out
+131072 bytes (128.0KB) copied, 0.369501 seconds, 346.4KB/s
+cp[   10.381666] urandom-seed: Seed file not found (/etc/urandom.seed)
+: can't create '/lib/firmware/IPQ8074/caldata.bin': No such file or directory
+[   10.411767] procd: - early -
+[   10.411806] procd: - watchdog -
+[   10.944290] procd: - watchdog -
+[   10.944498] procd: - ubus -
+[   11.007230] procd: - init -
+Please press Enter to activate this console.
+find: /sys/bus/spi/devices/*/mtd: No such file or directory
+== boot_mode_sel 0 ==
+Loading cnss2:
+[   11.241633] cnss: INFO: IPC Logging is disabled!
+[   11.241921] Skip QCA8074V1 in V2 platform
+[   11.247082] cnss[2]: INFO: Platform driver probed successfully. plat 0x0a98ff44 tgt 0xfffe
+[   11.249956] cnss: INFO: cnss_plat_ipc_qmi_svc_init: CNSS Platform IPC QMI Service is started
+[   11.504961] urngd: v1.0.2 started.
+[   11.529909] ubi1: attaching mtd14
+[   11.566096] ubi1: scanning is finished
+[   11.571276] ubi1: attached mtd14 (name "0:WIFIFW", size 9 MiB)
+[   11.571296] ubi1: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[   11.576027] ubi1: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[   11.582853] ubi1: VID header offset: 2048 (aligned 2048), data offset: 4096
+[   11.589705] ubi1: good PEBs: 72, bad PEBs: 0, corrupted PEBs: 0
+[   11.596479] ubi1: user volume: 1, internal volumes: 1, max. volumes count: 128
+[   11.602384] ubi1: max/mean erase counter: 6/5, WL threshold: 4096, image sequence number: 2139371539
+[   11.609676] ubi1: available PEBs: 9, total reserved PEBs: 63, PEBs reserved for bad PEB handling: 40
+[   11.618973] ubi1: background thread "ubi_bgt1d" started, PID 310
+[   11.631887] cnss: INFO: cnss_plat_ipc_qmi_reg_client_req_handler: QMI Client Connected. QMI Socket Node: 1 Port: 16391 ID: 1
+[   11.634105] cnss: INFO: CNSS Daemon connected
+[   11.647134] cnss: INFO: cnss_plat_ipc_qmi_init_setup_req_handler: MAC: 0 HW_TRC: 0 CAL: 0
+ WIFI FW mount is successful
+[   17.884979] kmodloader: loading kernel modules from /etc/modules.d/*
+[   17.898331] NET: Registered protocol family 38
+[   17.899674] xt_nfra: module license 'Proprietary' taints kernel.
+[   17.901677] Disabling lock debugging due to kernel taint
+[   17.907921] xt_nfra: init
+[   17.913139] xt_nfra: ready
+[   17.916102] senlc initialized: senlc_init
+[   17.918556] Entering: snlog_init
+[   17.929873] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   18.086809] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   18.092203] NET: Registered protocol family 15
+[   18.093130] Initializing XFRM netlink socket
+[   18.096940] mpls_gso: MPLS GSO support
+[   18.583485] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[   18.583518] platform regulatory.0: Falling back to sysfs fallback for: regulatory.db
+[   18.633408] cfg80211: failed to load regulatory.db
+[   18.663497] hsl_phytype_get_by_phyid: phy_id=4dd101
+[   18.663497]
+[   18.663526] qca808x_phy_api_ops_init[2732]:INFO:qca probe qca808x phy driver succeeded!
+[   18.669732] qca808x_ptp_register[1331]:INFO:qca808x phydev 90000.mdio:1c ptp clock registered
+[   18.677414] qca808x_ptp_hook_init[1440]:INFO:qca808x ptp driver hooked on 1 instance
+[   19.418505] adpt_hppe_port_mux_mac_type_set[2829]:WARN:port 1 need not to configure mux and mac type
+[   19.418537] adpt_hppe_port_mux_mac_type_set[2829]:WARN:port 2 need not to configure mux and mac type
+[   19.426742] adpt_hppe_port_mux_mac_type_set[2829]:WARN:port 3 need not to configure mux and mac type
+[   19.436147] adpt_hppe_port_mux_mac_type_set[2829]:WARN:port 4 need not to configure mux and mac type
+[   19.444957] adpt_hppe_port_mux_mac_type_set[2829]:WARN:port 5 need not to configure mux and mac type
+[   19.791506] regi_init[4015]:INFO:Initializing HPPE Done!!
+[   19.791618] regi_init[4075]:INFO:qca-ssdk module init succeeded!
+[   19.807866] tun: Universal TUN/TAP device driver, 1.6
+[   19.810547] EDMA ver 1 hw init
+[   19.812164] EDMA HW Reset completed succesfully
+[   19.814869] Num rings - TxDesc:1 (23-23) TxCmpl:1 (7-7)
+[   19.819265] RxDesc:1 (15-15) RxFill:1 (7-7)
+[   19.824807] GMAC5(bd16b580) Invalid MAC@ - using 2a:80:3f:e1:db:64
+[   19.828643] dp5: ppe offload disabled: 0 for macid 5
+[   19.834903] dp5: Switch attached to macid 5 status: 0
+[   19.840031] (unnamed net_device) (uninitialized): netif_napi_add() called with weight 100
+[   19.845220] libphy: PHY 90000.mdio:04 not found
+[   19.891435] nss-dp: probe of 3a001800.dp5 failed with error -14
+[   19.891502] GMAC6(bd16b580) Invalid MAC@ - using 86:12:4d:6f:85:dc
+[   19.896146] dp6: ppe offload disabled: 0 for macid 6
+[   19.902402] dp6: Switch attached to macid 6 status: 0
+[   20.002978] **********************************************************
+[   20.003002] * NSS Data Plane driver
+[   20.008395] **********************************************************
+[   20.019546] l2tp_core: L2TP core driver, V2.0
+[   20.020240] l2tp_netlink: L2TP netlink interface
+[   20.121293] qca-nss 39000000.nss: Direct firmware load for qca-nss0.bin failed with error -2
+[   20.121326] qca-nss 39000000.nss: Falling back to sysfs fallback for: qca-nss0.bin
+/lib/firmware/qca-nss0.bin 33
+[   21.015329] nss_driver - fw of size 835392  bytes copied to load addr: 40000000, nss_id : 0
+[   21.016791] Supported Frequencies -
+[   21.016794] 748.8 MHz
+[   21.022507] 1.4976 GHz
+[   21.026293] 1.6896 GHz
+[   21.028459]
+[   21.033335] 7f512fc0: set sdma bbcd8e00
+[   21.035063] 7f512fc0: meminfo init succeed
+[   21.041877] 7f512fc0: All resources initialized and nss core0 has been brought out of reset
+[   21.054015] qca-nss 39400000.nss: Direct firmware load for qca-nss1.bin failed with error -2
+[   21.061170] qca-nss 39400000.nss: Falling back to sysfs fallback for: qca-nss1.bin
+[   21.070190] node size 2 # items 4
+[   21.077248] memory: 40000000 1073741824 (avl 952975360) items 4 active_cores 2
+[   21.080614] addr/size storage words 2 2 # words 4 in DTS, ddr size 1000000
+[   21.087744] 7f512fc0: nss core 0 booted successfully
+/lib/firmware/qca-nss1.bin 33
+[   21.128644] nss_driver - fw of size 295260  bytes copied to load addr: 40800000, nss_id : 1
+[   21.129253] Supported Frequencies -
+[   21.129254] 748.8 MHz
+[   21.135817] 1.4976 GHz
+[   21.139606] 1.6896 GHz
+[   21.141786]
+[   21.146660] 7f5177c0: set sdma bbe68900
+[   21.148382] 7f5177c0: meminfo init succeed
+[   21.152163] 7f5177c0: All resources initialized and nss core1 has been brought out of reset
+[   21.153704] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[   21.155275] node size 2 # items 4
+[   21.157789] nat46: module (version 1182f30785e4274913f01a8c3d7e1b5437ae3819) loaded.
+[   21.164291] memory: 40000000 1073741824 (avl 953278464) items 4 active_cores 2
+[   21.164298] addr/size storage words 2 2 # words 4 in DTS, ddr size 1000000
+[   21.164312] 7f5177c0: nss core 1 booted successfully
+[   21.178988] gre: GRE over IPv4 demultiplexor driver
+[   21.189423] ip_gre: GRE over IPv4 tunneling driver
+[   21.202211] ip6_gre: GRE over IPv6 tunneling driver
+[   21.213588] Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[   21.221197] rmnet_nss_init(): initializing rmnet_nss
+[   21.225191] PPP generic driver version 2.4.2
+[   21.226904] NET: Registered protocol family 24
+[   21.231336] PPTP driver version 0.8.5
+[   21.255461] batman_adv: B.A.T.M.A.N. advanced 2019.3 (compatibility version 15) loaded
+[   21.256744] cryptodev: driver 1.10 loaded.
+[   21.266562] openvswitch: Open vSwitch switching datapath
+[   21.335037] nss_lag_init[352]:LAG Manager Installed
+[   21.409400] diag: failed to find diag_dload imem node
+[   21.428064] TRACK: P[0]	PMask[4]
+[   21.428121] TRACK: P[1]	PMask[4]
+[   21.430378] TRACK: P[2]	PMask[4]
+[   21.436048] TRACK: P[3]	PMask[4]
+[   21.436808] TRACK: P[4]	PMask[4]
+[   21.440011] TRACK: P[5]	PMask[4]
+[   21.443354] TRACK: P[6]	PMask[4]
+[   21.457186] QCA multicast snooping installed successfully
+[   21.464561] <NSS-CRYPTO>:module loaded Build_ID - 10/04/24, 05:25:43 SoC=ipq807x
+[   21.475722] cannot find nss-macsec0 node
+[   21.476007] nss-macsec1 DT exist!
+[   21.519909] cannot find nss-macsec2 node
+[   21.520273] cannot find nss-macsec3 node
+[   21.523052] nss_macsec init success
+[   21.583264] usbcore: registered new interface driver usbfs
+[   21.583308] usbcore: registered new interface driver hub
+[   21.587774] usbcore: registered new device driver usb
+[   21.602474] SCSI subsystem initialized
+[   21.604154] usbcore: registered new interface driver usb-storage
+[   21.605734] Mirror/redirect action on
+[   21.615266] u32 classifier
+[   21.615282]     input device check on
+[   21.617449]     Actions configured
+[   21.625582] GACT probability on
+[   21.627770] Simple TC action Loaded
+[   21.638791] fuse: init (API version 7.31)
+[   21.663392] qcom-qusb2-phy 79000.qusb: 79000.qusb supply vdda-pll not found, using dummy regulator
+[   21.663584] qcom-qusb2-phy 79000.qusb: 79000.qusb supply vdda-phy-dpdm not found, using dummy regulator
+[   21.672398] qcom-qusb2-phy 79000.qusb: Registered Qcom-QUSB2 phy
+[   21.681004] qcom-qusb2-phy 59000.qusb: 59000.qusb supply vdda-pll not found, using dummy regulator
+[   21.687410] qcom-qusb2-phy 59000.qusb: 59000.qusb supply vdda-phy-dpdm not found, using dummy regulator
+[   21.697188] qcom-qusb2-phy 59000.qusb: Registered Qcom-QUSB2 phy
+[   21.707606] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   21.711184] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[   21.718660] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x0000000002010010
+[   21.724266] xhci-hcd xhci-hcd.0.auto: irq 120, io mem 0x08a00000
+[   21.736687] hub 1-0:1.0: USB hub found
+[   21.740652] hub 1-0:1.0: 1 port detected
+[   21.747375] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   21.747980] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[   21.753185] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0 SuperSpeed
+[   21.760578] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[   21.768458] hub 2-0:1.0: USB hub found
+[   21.775234] hub 2-0:1.0: 1 port detected
+[   21.783194] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   21.783337] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 3
+[   21.788398] xhci-hcd xhci-hcd.1.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x0000000002010010
+[   21.795698] xhci-hcd xhci-hcd.1.auto: irq 121, io mem 0x08c00000
+[   21.807009] hub 3-0:1.0: USB hub found
+[   21.811212] hub 3-0:1.0: 1 port detected
+[   21.815634] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   21.818694] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 4
+[   21.824121] xhci-hcd xhci-hcd.1.auto: Host supports USB 3.0 SuperSpeed
+[   21.831981] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[   21.839318] hub 4-0:1.0: USB hub found
+[   21.846646] hub 4-0:1.0: 1 port detected
+[   21.937251] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[   22.124802] nf_conntrack_rtsp v0.7 loading
+[   22.172731] nf_nat_rtsp v0.7 loading
+[   22.873331] PPP MPPE Compression module registered
+[   23.125560] usbcore: registered new interface driver uas
+[   23.695055] xt_coova: ready
+[   23.713623] xt_time: kernel timezone is -0000
+[   23.718119] kmodloader: done loading kernel modules from /etc/modules.d/*
+S10cloud_guard boot +++
+uboot(SN/MAC/HWID)[2240X421KE8L/88:DC:97:04:CF:A8/0101011C], cert(SN/MAC/HWID)[2240X421KE8L/88:DC:97:04:CF:A8/0101011C], no problem.
+uboot_ret[11] cert_ret[] retry_cnt[0]
+uboot(SN/MAC/HWID)[2240X421KE8L/88:DC:97:04:CF:A8/0101011C], cert(SN/MAC/HWID)[2240X421KE8L/88:DC:97:04:CF:A8/0101011C], no problem.
+S10cloud_guard boot ---
+acfg_tool: Issuing blocking call to wait for events
+[   30.956459] loading qca-wifi
+initial watchdog ...
+qcawifi configuration is disable
+MLD Single Netdev is ENABLED
+*****cnssdaemon pid=233*********
+*****hostapd pid=3182
+3289
+3291*********
+*****supplicant pid=3323*********
+sawf telemetry not enabled.
+No Direct-Attach chipsets found.
+Number of Umac reset irqs detected : 0 and number of cpus detected 4
+>>>>>wifi0 exist:[nss_olcfg:1 nss_ol_num:1]
+>>>>>wifi1 exist:[nss_olcfg:3 nss_ol_num:2]
+MLD Single Netdev is ENABLED
+*****cnssdaemon pid=233*********
+*****hostapd pid=3182
+3291*********
+*****supplicant pid=3323*********
+sawf telemetry not enabled.
+Number of Umac reset irqs detected : 0 and number of cpus detected 4
+acfg_tool: Issuing blocking call to wait for events
+initial power-detect ...
+Default Service Class Count: 8
+Custom Service Class Count: 12
+Default Service Class Count: 8
+Custom Service Class Count: 12
+qcawifi qcawificfg80211 disable radio wifi2
+qcawifi qcawificfg80211 disable radio wifi1
+qcawifi qcawificfg80211 disable radio wifi0
+***** QDSS Tracing Configuration completed *******
+****** Starting QDSS for Integrated ********
+MLD Single Netdev is ENABLED: Add MLD Interface
+qcawifi qcawificfg80211 disable radio wifi2
+qcawifi qcawificfg80211: enable radio wifi1
+MLD Single Netdev is ENABLED
+*****cnssdaemon pid=233*********
+*****hostapd pid=3182
+3291*********
+*****supplicant pid=3323*********
+sawf telemetry not enabled.
+Number of Umac reset irqs detected : 0 and number of cpus detected 4
+>>>>>Install rfdetector first to enable rfdetect
+>>>>>Install snsniffer first to enable wids
+qcawifi qcawificfg80211: enable radio wifi0
+MLD Single Netdev is ENABLED
+sawf telemetry not enabled.
+Number of Umac reset irqs detected : 0 and number of cpus detected 4
+>>>>>Install rfdetector first to enable rfdetect
+>>>>>Install snsniffer first to enable wids
+MLD Single Netdev is ENABLED
+MLD Single Netdev is ENABLED
+MLD Single Netdev is ENABLED
+MLD Single Netdev is ENABLED
+MLD Single Netdev is ENABLED: Add MLD to Bridge
+MLD Single Netdev is ENABLED: Add MLD to Bridge
+Default Service Class Count: 8
+Custom Service Class Count: 12
+SLA Count: 7
+****** Starting QDSS for Integrated ********
+**** Platform Name: ap-hk07 *****
+Copy ART caldata from /dev/mtdblock12 to /tmp/virtual_art.bin
+CP No Gateway, skip this reload to speed up
+rsrcmgr: Resource Manager not enabled
+Bootconfig: Age is Updated
+portal_ifaces[]
+chilli_sync start 157
+no interface enable portal, don't do chilli_sync.
+
+************************************************************************
+*                                 ECW230v3                             *
+************************************************************************
+
+password:
+
+
+
+BusyBox v1.35.0 (2024-10-04 04:04:23 UTC) built-in shell (ash)
+
+
+    d888888o.        ,o888888o.          ,o888888o.            .8.
+  .`8888:' `88.   . 8888     `88.       8888     `88.         .888.
+  8.`8888.   Y8  ,8 8888       `8b   ,8 8888       `8.       :88888.
+  `8.`8888.      88 8888        `8b  88 8888                . `88888.
+   `8.`8888.     88 8888         88  88 8888               .8. `88888.
+    `8.`8888.    88 8888     `8. 88  88 8888              .8`8. `88888.
+     `8.`8888.   88 8888      `8,8P  88 8888             .8' `8. `88888.
+ 8b   `8.`8888.  `8 8888       ;8P   `8 8888       .8'  .8'   `8. `88888.
+ `8b.  ;8.`8888   ` 8888     ,88'8.     8888     ,88'  .888888888. `88888.
+  `Y8888P ,88P'      `8888888P'  `8.     `8888888P'   .8'       `8. `88888.
+
+ -----------------------------------------------------------------------------
+ OpenWrt 19.07-SNAPSHOT, r0-c2506f4a
+ -----------------------------------------------------------------------------
+=== WARNING! =====================================
+There is no root password defined on this device!
+Use the "passwd" command to set up a new password
+in order to prevent unauthorized SSH logins.
+--------------------------------------------------
+root@ECW230v3:~#
